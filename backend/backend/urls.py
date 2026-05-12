@@ -21,3 +21,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/users/', include('users.urls')),
 ]
+
+from django.urls import path
+from backend_app.views import login_view
+
+urlpatterns = [
+    path('login/', login_view),
+]
